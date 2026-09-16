@@ -7,7 +7,7 @@ Spark Reply is a standalone Chrome extension using your own OpenAI API key. No l
 ## Features
 
 - Reply suggestions and settings in the same panel.
-- English and Turkish interface; English, Turkish, German, French, Spanish, and Hungarian replies.
+- English, Turkish, and Simplified Chinese interface; English, Turkish, German, French, Spanish, and Hungarian replies.
 - Light, dark, and system themes, with compact language and appearance controls.
 - Conversation preview with individual message selection.
 - A “Replying as” field with account detection where available and a remembered name per Slack workspace.
@@ -17,9 +17,9 @@ Spark Reply is a standalone Chrome extension using your own OpenAI API key. No l
 
 ## Download and share
 
-Current preview: **1.0.3**.
+Current preview: **1.0.4**.
 
-- [Download extension ZIP](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.3.zip)
+- [Download extension ZIP](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.4.zip)
 - The packed CRX in `dist/` is for supported development/distribution environments only. **Do not use it for normal Chrome installation on macOS or Windows.**
 
 **A packed CRX is not a one-click installation solution for ordinary Chrome on macOS or Windows.** Chrome restricts normal installation to extensions distributed through the Chrome Web Store. The CRX is supplied for supported development/distribution environments; it is not store-signed. See [Chrome's distribution documentation](https://developer.chrome.com/docs/extensions/how-to/distribute).
@@ -30,7 +30,7 @@ For a friend testing this preview today, use the ZIP and the development install
 
 **Yes, Developer mode is required for this preview. Use the ZIP, not the CRX.**
 
-1. [Download Spark Reply ZIP](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.3.zip).
+1. [Download Spark Reply ZIP](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.4.zip).
 2. Extract it: double-click the ZIP on macOS, or right-click → **Extract All** on Windows. Keep the extracted folder on your computer.
 3. Paste `chrome://extensions` into Chrome's address bar and press Enter.
 4. Turn on **Developer mode** in the top-right corner.

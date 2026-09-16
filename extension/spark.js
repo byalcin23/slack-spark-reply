@@ -182,8 +182,8 @@
     if (data.type==="ready") { ready=true; if(opened){capture();send("visibility",{visible:true});} return; }
     if (data.type==="resize" && Number.isFinite(data.height)) {preferredHeight=Math.max(300,Math.min(760,data.height));place();return;}
     if (data.type==="appearance") {
-      uiLanguage=data.ui_language==="en"?"en":"tr";
-      orb.title=uiLanguage==="tr"?"Spark Reply — Cevap öner":"Spark Reply — Suggest replies"; orb.setAttribute("aria-label",orb.title);return;
+      uiLanguage=["en","tr","zh-CN"].includes(data.ui_language)?data.ui_language:"tr";
+      orb.title=uiLanguage==="zh-CN"?"Spark Reply — 生成回复":uiLanguage==="tr"?"Spark Reply — Cevap öner":"Spark Reply — Suggest replies"; orb.setAttribute("aria-label",orb.title);return;
     }
     if (!opened) return;
     if (data.type==="close") close(true);

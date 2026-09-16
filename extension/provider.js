@@ -2,7 +2,7 @@
 "use strict";
 (() => {
   const LANGUAGES = Object.freeze({en: "English", tr: "Turkish", de: "German", fr: "French", es: "Spanish", hu: "Hungarian"});
-  const UI_LANGUAGES = Object.freeze({tr: "Turkish", en: "English"});
+  const UI_LANGUAGES = Object.freeze({tr: "Turkish", en: "English", "zh-CN": "Simplified Chinese"});
   const DEFAULT_MODEL = "gpt-4.1-mini";
   const ENDPOINT = "https://api.openai.com/v1/responses";
   class ProviderError extends Error {

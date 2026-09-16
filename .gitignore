@@ -11,3 +11,7 @@ dist/*
 !dist/spark-reply-1.0.3.zip
 !dist/spark-reply-1.0.3.json
 !dist/spark-reply-1.0.3.crx
+
+!dist/spark-reply-1.0.4.zip
+!dist/spark-reply-1.0.4.json
+!dist/spark-reply-1.0.4.crx

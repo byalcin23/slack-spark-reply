@@ -80,6 +80,109 @@
   const colorScheme = matchMedia("(prefers-color-scheme: dark)");
   Object.assign(strings.en, {API_REQUEST_FAILED:"OpenAI could not process this request. Check the model and try again.",MODEL_UNAVAILABLE:"This API key cannot use the selected model. Try gpt-4.1-mini.",MODEL_INVALID:"Enter a valid OpenAI model ID.",API_REFUSED:"OpenAI could not draft a reply for this content.",REQUEST_BUSY:"A request is already running. Please wait a moment.",REQUEST_CANCELLED:"The connection changed. Please try again.",CONTEXT_EMPTY:"Add context or instructions first.",CONTEXT_TOO_LARGE:"The context is too long. Remove some messages and try again.",INTERNAL_ERROR:"Could not complete the request. Reload the extension and try again."});
   Object.assign(strings.tr, {API_REQUEST_FAILED:"OpenAI isteği işleyemedi. Modeli kontrol edip yeniden dene.",MODEL_UNAVAILABLE:"Bu API anahtarı seçili modeli kullanamıyor. gpt-4.1-mini modelini deneyebilirsin.",MODEL_INVALID:"Geçerli bir OpenAI model kimliği gir.",API_REFUSED:"OpenAI bu içerik için cevap taslağı hazırlayamadı.",REQUEST_BUSY:"Bir istek sürüyor. Biraz bekleyip tekrar dene.",REQUEST_CANCELLED:"Bağlantı değişti. Yeniden dene.",CONTEXT_EMPTY:"Önce bağlam veya ne söylemek istediğini ekle.",CONTEXT_TOO_LARGE:"Bağlam çok uzun. Bazı mesajları çıkarıp yeniden dene.",INTERNAL_ERROR:"İşlem tamamlanamadı. Eklentiyi yenileyip tekrar dene."});
+  strings["zh-CN"] = {
+  "languages": "语言",
+  "appearance": "外观",
+  "close": "关闭",
+  "interfaceLanguage": "界面语言",
+  "replyLanguage": "回复语言",
+  "replies": "回复",
+  "settings": "设置",
+  "light": "浅色",
+  "dark": "深色",
+  "system": "跟随系统",
+  "connectTitle": "连接 OpenAI",
+  "connectHint": "在设置中添加 API 密钥，即可生成回复。",
+  "connect": "设置连接",
+  "demoNotice": "示例回复。不会向 AI 发送消息。",
+  "draftTitle": "撰写回复",
+  "draftHint": "根据所选消息和你的要求生成回复。",
+  "context": "对话上下文",
+  "refresh": "刷新消息",
+  "intent": "你想说什么？",
+  "intentPlaceholder": "例如：感谢对方，并提议明天简短通话。",
+  "existingDraft": "当前 Slack 草稿",
+  "generate": "生成回复",
+  "generateAgain": "重新生成",
+  "generating": "正在撰写回复…",
+  "settingsHint": "在这里管理连接和偏好设置。",
+  "notConnected": "未连接",
+  "configured": "密钥已保存",
+  "connected": "已连接",
+  "providerDescription": "通过此 Chrome 扩展直接连接。",
+  "apiKey": "OpenAI API 密钥",
+  "saved": "当前会话",
+  "keyHint": "密钥仅在当前浏览器会话中保留。完全关闭 Chrome 后，需要重新输入。",
+  "keySavedHint": "当前浏览器会话已保存密钥。留空可保留现有密钥。",
+  "model": "模型",
+  "modelHint": "默认使用 gpt-4.1-mini，也可输入其他受支持的 OpenAI 模型 ID。",
+  "saveConnection": "保存并测试",
+  "testConnection": "测试",
+  "privacyTitle": "会分享哪些信息？",
+  "privacyCopy": "仅在你请求回复时，你的 Slack 身份、所选消息、当前草稿和要求会直接发送给 OpenAI。API 密钥不会分享给 Slack。",
+  "privacyExtra": "API 使用费用与 ChatGPT 分开计费，适用 OpenAI 的 API 数据政策。此扩展不会保存对话历史。",
+  "createKey": "创建 OpenAI API 密钥 ↗",
+  "forgetConnection": "移除已保存的 API 密钥",
+  "confirmForget": "确认移除 API 密钥",
+  "forgetPrompt": "要从当前浏览器会话中移除 API 密钥吗？再次点击以确认。",
+  "footer": "发送前请检查草稿。Spark Reply 不会替你发送消息。",
+  "settingsFooter": "密钥保留在扩展中，不会发送给 Slack。",
+  "showSecret": "显示密钥",
+  "hideSecret": "隐藏密钥",
+  "contextEmpty": "未找到消息。请刷新，或在下方输入对话背景。",
+  "contextCount": "已选择",
+  "includeMessage": "包含此人的消息：",
+  "unknownAuthor": "未知发言者",
+  "summary": "对话摘要",
+  "short": "简短",
+  "friendly": "友好",
+  "professional": "专业",
+  "suggestions": "回复选项",
+  "copy": "复制回复",
+  "insert": "插入草稿",
+  "copied": "已复制到剪贴板。",
+  "copyFailed": "无法复制。请选中回复后手动复制。",
+  "inserted": "已添加到 Slack 草稿。发送前请检查。",
+  "insertFailed": "无法插入回复，请尝试复制。",
+  "staleDraft": "Slack 草稿或对话已更改。请刷新上下文，或复制回复。",
+  "missing": "请添加消息，或说明你想说什么。",
+  "saveSuccess": "已连接。密钥已保存到当前浏览器会话。",
+  "testSuccess": "已通过小型测试请求验证连接。",
+  "forgotten": "已从当前浏览器会话中移除 API 密钥。",
+  "saving": "正在检查连接…",
+  "testing": "正在发送测试请求…",
+  "forgetting": "正在移除已保存的 API 密钥…",
+  "missingKey": "请输入 OpenAI API 密钥以建立连接。",
+  "missingModel": "请输入 OpenAI 模型 ID。",
+  "preferencesFailed": "无法保存偏好设置。请重新加载扩展后再试。",
+  "genericError": "出现错误，请重试。",
+  "reload": "扩展已更新。请刷新此 Slack 标签页。",
+  "demoConnection": "此预览不会保存密钥或连接 API。请在已安装的扩展中设置。",
+  "demoDone": "这些是预先编写的示例，并非 AI 生成的回复。",
+  "popupHint": "请在 Slack 消息框旁打开 Spark Reply，以使用对话上下文。",
+  "API_UNCONFIGURED": "请先在设置中添加 OpenAI API 密钥。",
+  "API_KEY_INVALID": "OpenAI 拒绝了此 API 密钥。请检查后重试。",
+  "API_FORBIDDEN": "此 API 密钥无权访问所选模型。",
+  "API_RATE_LIMIT": "已达到 OpenAI 使用限制。请检查 API 配额，或稍后重试。",
+  "API_NETWORK": "无法连接 OpenAI。请检查网络后重试。",
+  "API_RESPONSE_INVALID": "OpenAI 返回了无法处理的响应。请重试。",
+  "REQUEST_INVALID": "请检查模型、API 密钥和请求后重试。",
+  "REQUEST_TIMEOUT": "请求超时，请重试。",
+  "MODEL_UNSUPPORTED": "此模型不支持所需的响应格式。请尝试 gpt-4.1-mini。",
+  "API_ERROR": "OpenAI 无法完成请求。请检查 API 设置后重试。",
+  "replyAs": "以你的身份回复",
+  "identityHint": "你的 Slack 显示名称会按工作区保存在此设备上。可在此修改或清空。",
+  "IDENTITY_REQUIRED": "请输入你的 Slack 显示名称，以便以你的身份撰写回复。",
+  "API_REQUEST_FAILED": "OpenAI 无法处理此请求。请检查模型后重试。",
+  "MODEL_UNAVAILABLE": "此 API 密钥无法使用所选模型。请尝试 gpt-4.1-mini。",
+  "MODEL_INVALID": "请输入有效的 OpenAI 模型 ID。",
+  "API_REFUSED": "OpenAI 无法为此内容撰写回复。",
+  "REQUEST_BUSY": "已有请求正在进行，请稍候。",
+  "REQUEST_CANCELLED": "连接已更改，请重试。",
+  "CONTEXT_EMPTY": "请先添加上下文或要求。",
+  "CONTEXT_TOO_LARGE": "上下文过长。请移除部分消息后重试。",
+  "INTERNAL_ERROR": "无法完成操作。请重新加载扩展后重试。"
+};
   const t = key => strings[preferences.ui_language][key] || strings.en[key] || key;
   const effectiveTheme = () => preferences.theme === "system" ? (colorScheme.matches ? "dark" : "light") : preferences.theme;
   function emit(type, extra = {}) {
@@ -120,7 +223,7 @@
       if (type === "spark:health") return {mode:"demo"};
       if (type !== "spark:suggest") throw Object.assign(new Error(t("demoConnection")),{code:"DEMO_ONLY"});
       await new Promise(resolve => setTimeout(resolve, 450));
-      return {mode:"demo",summary_tr:preferences.ui_language === "tr" ? "Bu, bir iş arkadaşının olumlu geri bildirimine verilen örnek bir cevaptır." : "This example responds to a colleague’s positive feedback.",note_tr:preferences.ui_language === "tr" ? "Hazır örnekler gösteriliyor. Yazdığın not yapay zekâ ile işlenmedi." : "These are prewritten examples. Your instructions were not processed by AI.",replies:[{style:"short",text:"Thanks, glad the update helps! 😊"},{style:"friendly",text:"Thanks, Alex! Glad it helps 😊 Hopefully the updated link makes things a little easier for the next person."},{style:"professional",text:"Thanks for the feedback, Alex. I’ve updated the link so new joiners can go directly to the request form."}]};
+      return {mode:"demo",summary_tr:preferences.ui_language === "zh-CN" ? "此示例回复了同事的积极反馈。" : preferences.ui_language === "tr" ? "Bu, bir iş arkadaşının olumlu geri bildirimine verilen örnek bir cevaptır." : "This example responds to a colleague’s positive feedback.",note_tr:preferences.ui_language === "zh-CN" ? "这些是预先编写的示例。你的要求尚未由 AI 处理。" : preferences.ui_language === "tr" ? "Hazır örnekler gösteriliyor. Yazdığın not yapay zekâ ile işlenmedi." : "These are prewritten examples. Your instructions were not processed by AI.",replies:[{style:"short",text:"Thanks, glad the update helps! 😊"},{style:"friendly",text:"Thanks, Alex! Glad it helps 😊 Hopefully the updated link makes things a little easier for the next person."},{style:"professional",text:"Thanks for the feedback, Alex. I’ve updated the link so new joiners can go directly to the request form."}]};
     }
     const response = await chrome.runtime.sendMessage({type,payload});
     if (!response?.ok) throw Object.assign(new Error(response?.error || "Request failed"), {code:response?.code});
@@ -128,7 +231,7 @@
   }
   function validPreferences(saved) {
     const value = {...defaults};
-    for (const [key,allowed] of Object.entries({ui_language:["tr","en"],reply_language:Object.keys(languages),theme:["system","light","dark"]})) if (allowed.includes(saved?.[key])) value[key] = saved[key];
+    for (const [key,allowed] of Object.entries({ui_language:["tr","en","zh-CN"],reply_language:Object.keys(languages),theme:["system","light","dark"]})) if (allowed.includes(saved?.[key])) value[key] = saved[key];
     return value;
   }
   async function savePreference(key, value) {
@@ -150,7 +253,7 @@
   function renderMenus() {
     const interfaceList = $("#interface-choices"), replyList = $("#reply-choices"), themeList = $("#theme-choices");
     interfaceList.replaceChildren(); replyList.replaceChildren(); themeList.replaceChildren();
-    for (const language of ["tr","en"]) interfaceList.append(makeChoice(languages[language], preferences.ui_language === language, () => savePreference("ui_language",language)));
+    for (const language of ["tr","en","zh-CN"]) interfaceList.append(makeChoice(language === "zh-CN" ? "简体中文" : languages[language], preferences.ui_language === language, () => savePreference("ui_language",language)));
     for (const [language,label] of Object.entries(languages)) replyList.append(makeChoice(label, preferences.reply_language === language, () => { savePreference("reply_language",language); closeMenus(); }));
     for (const name of ["light","dark","system"]) {
       const button = document.createElement("button"); button.className = "theme-choice" + (preferences.theme === name ? " active" : "");
@@ -220,7 +323,7 @@
       checkbox.setAttribute("aria-label", t("includeMessage") + " " + message.author);
       checkbox.addEventListener("change", () => { message.selected = checkbox.checked; $("#context-count").textContent = context.messages.filter(item => item.selected).length + " / " + context.messages.length; });
       const body = document.createElement("div"), author = document.createElement("strong"), text = document.createElement("p");
-      author.textContent = message.author; text.textContent = message.text; body.append(author,text); label.append(checkbox,body); list.append(label);
+      author.textContent = message.author === "Unknown speaker" ? t("unknownAuthor") : message.author; text.textContent = message.text; body.append(author,text); label.append(checkbox,body); list.append(label);
     });
     $("#draft-box").hidden = !context.draft;
     $("#draft-preview").textContent = context.draft;

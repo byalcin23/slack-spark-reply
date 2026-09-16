@@ -41,6 +41,10 @@ window.addEventListener("load", async () => {
     assert(!doc.querySelector("#settings-view").hidden&&doc.querySelector("#reply-view").hidden,"settings opens inside the same panel");
     await api.savePreference("ui_language","en");
     assert(doc.querySelector("#settings-tab").textContent.includes("Settings")&&doc.querySelector("label[for=api-key]").textContent.includes("API key"),"settings and main view share interface language");
+    await api.savePreference("ui_language","zh-CN");
+    assert(doc.documentElement.lang==="zh-CN"&&doc.querySelector("#settings-tab").textContent.includes("设置")&&doc.querySelector("#reply-tab").textContent.includes("回复"),"Chinese applies to both settings and replies");
+    assert(JSON.parse(localStorage.getItem("slackSparkPreferences")).ui_language==="zh-CN","Chinese preference persists");
+    await api.savePreference("ui_language","en");
     await api.savePreference("reply_language","tr");await api.savePreference("theme","light");
     assert(doc.documentElement.dataset.theme==="light","light theme applies to the whole panel");
     doc.querySelector("#language-button").click();

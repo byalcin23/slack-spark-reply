@@ -1,11 +1,15 @@
 # Validation
 
-## Current preview: 1.0.3
+## Current preview: 1.0.4
 
 - 23 Python tests passed during release development.
 - Packaged browser acceptance checks run against the exact release ZIP in an isolated Chrome for Testing profile.
 - Coverage includes trusted extension access, session-only API credentials, sanitized provider failures, identity detection and persistence after panel reload, workspace isolation, duplicate display names, grouped messages, nested Slack markup, timestamp exclusion, native typing, draft insertion without sending, theme/language preferences, and panel dismissal.
 - Optional local browser checks cover main/thread separation, hidden messages, changed drafts, navigation, and isolated keyboard events.
+
+## Simplified Chinese interface
+
+All 101 interface strings have Simplified Chinese translations. Packaged acceptance and local UI regressions passed, including Chinese settings/reply labels, saved language preference, and Chinese provider advice while retaining English as the reply language.
 
 ## Scope of verification
 
