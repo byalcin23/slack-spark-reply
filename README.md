@@ -114,3 +114,13 @@ The signing key is stored under ignored `.local/`. Keep it private and back it u
 Slack web in Chrome is supported; the Slack desktop app is not. At most 12 visible messages are used. The extension does not retrieve full channel history, attachments, images, or linked documents. Slack markup changes can require adapter updates, and automatic account detection is not available in every layout. Always review AI-generated replies.
 
 Store publication still requires publisher/support details, a public privacy-policy URL, reviewer access where required, and Google's review. Follow the [release checklist](store/RELEASE_CHECKLIST.md).
+
+## Roadmap
+
+Planned for future development; these features are not implemented in the current release.
+
+- [ ] Integrate additional AI providers and models beyond the current OpenAI connection.
+- [ ] Build a desktop application for macOS.
+- [ ] Build a desktop application for Windows.
+
+No delivery dates have been set.
