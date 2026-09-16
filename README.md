@@ -20,22 +20,32 @@ Spark Reply is a standalone Chrome extension using your own OpenAI API key. No l
 Current preview: **1.0.3**.
 
 - [Download extension ZIP](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.3.zip)
-- [Download packed CRX](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.3.crx)
+- The packed CRX in `dist/` is for supported development/distribution environments only. **Do not use it for normal Chrome installation on macOS or Windows.**
 
 **A packed CRX is not a one-click installation solution for ordinary Chrome on macOS or Windows.** Chrome restricts normal installation to extensions distributed through the Chrome Web Store. The CRX is supplied for supported development/distribution environments; it is not store-signed. See [Chrome's distribution documentation](https://developer.chrome.com/docs/extensions/how-to/distribute).
 
 For a friend testing this preview today, use the ZIP and the development installation below. For installation through a normal store link, an **unlisted Chrome Web Store release** is the intended route. This project has not been submitted to or approved by the store.
 
-## Install the preview
+## Quick install (Chrome on macOS / Windows)
 
-1. Download the ZIP and extract it into a folder you will keep.
-2. Open `chrome://extensions` and enable **Developer mode**.
-3. Choose **Load unpacked** and select the extracted folder containing `manifest.json`. If you cloned this repository, select `extension/` instead.
-4. Reload your Slack web tab.
-5. Open the sparkle button beside the composer, then **Settings**.
-6. Enter your own OpenAI API key and choose **Save & test**.
-7. Check **Replying as**. If account detection is unavailable, enter your Slack display name once. It is saved locally for that workspace.
-8. Review the selected messages, enter your instructions, and choose **Suggest replies**.
+**Yes, Developer mode is required for this preview. Use the ZIP, not the CRX.**
+
+1. [Download Spark Reply ZIP](https://github.com/byalcin23/slack-spark-reply/raw/refs/heads/main/dist/spark-reply-1.0.3.zip).
+2. Extract it: double-click the ZIP on macOS, or right-click → **Extract All** on Windows. Keep the extracted folder on your computer.
+3. Paste `chrome://extensions` into Chrome's address bar and press Enter.
+4. Turn on **Developer mode** in the top-right corner.
+5. Click **Load unpacked** and select the extracted **folder** containing `manifest.json`. Do not select or drag in the ZIP or CRX file.
+6. Open or reload Slack in Chrome. Click the sparkle button beside the message box.
+7. Open **Settings**, enter your own OpenAI API key, and click **Save & test**.
+8. Check **Replying as**, enter your Slack display name if needed, and choose **Suggest replies**.
+
+If you downloaded the entire repository using GitHub's **Code → Download ZIP**, select its `extension/` subfolder at step 5.
+
+### “CRX_REQUIRED_PROOF_MISSING” error
+
+Chrome is rejecting the CRX because it lacks the required Chrome Web Store signing proof. **Turning on Developer mode does not make that CRX installable.** Use the ZIP and **Load unpacked** steps above instead.
+
+Installation without Developer mode will require a future Chrome Web Store release. There is no store installation link yet.
 
 To update, replace the extension files, click **Reload** on its extension card, and reload Slack. You may need to re-enter the API key after reloading the extension or fully closing Chrome.
 
