@@ -1,0 +1,29 @@
+{
+  "name": "Spark Reply — Draft replies for Slack",
+  "version": "1.0.3",
+  "artifact": "spark-reply-1.0.3.zip",
+  "sha256": "6f7fe9537f92331f21dc08cbcac67f2aae616abb50f557a99a0b3b922ff41919",
+  "files": [
+    "background.js",
+    "icons/icon-128.png",
+    "icons/icon-16.png",
+    "icons/icon-32.png",
+    "icons/icon-48.png",
+    "icons/mark.svg",
+    "manifest.json",
+    "options.html",
+    "options.js",
+    "panel.css",
+    "panel.html",
+    "panel.js",
+    "provider.js",
+    "spark.js"
+  ],
+  "size_bytes": 46060,
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "optional_host_permissions": [],
+  "status": "Packaged candidate; publication and live acceptance require release checklist.",
+  "connection": "Standalone extension: direct OpenAI HTTPS requests; no local server or pairing code."
+}

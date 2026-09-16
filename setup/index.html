@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Slack Spark · OpenAI bağlantısı</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111019;color:#f0edf8;font:15px/1.6 -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:600px;margin:50px auto;padding:32px;background:#1d1929;border:1px solid #463958;border-radius:20px}h1{margin:0;font-size:26px}p{color:#bcb2cb}label{display:block;font-weight:600;margin:18px 0 6px}input{width:100%;padding:12px;background:#100e17;color:#f0edf8;border:1px solid #5c4b70;border-radius:9px;font:inherit}button{width:100%;margin-top:22px;padding:13px;background:#c3a8ff;color:#27133d;border:0;border-radius:10px;font:inherit;font-weight:700;cursor:pointer}button:disabled{opacity:.5;cursor:wait}#status{white-space:pre-wrap;color:#d9c6ff}#status.error{color:#ffb4ba}.note{font-size:12px}#sample{padding:14px;border-left:3px solid #c3a8ff;background:#282033;white-space:pre-wrap}a{color:#d9c6ff}.badge{display:inline-block;background:#30263f;color:#d9c6ff;padding:4px 10px;border-radius:8px;font-size:12px;margin-bottom:16px}@media(max-width:640px){main{margin:16px;padding:22px}}
+</style></head><body><main>
+<span class="badge">✦ Slack Spark · API kurulumu</span>
+<h1>OpenAI API bağlantısı</h1><p>Bu Mac’teki yardımcı, API anahtarını kullanarak cevap üretir. Anahtarını girip bağlantıyı test et; başarılı olduğunda Slack’teki ✦ panelini kullanabilirsin.</p>
+<form id="setup-form">
+<label for="pairing">Eklenti bağlantı kodu</label><input id="pairing" type="password" required autocomplete="off" placeholder="Terminaldeki Extension pairing code">
+<p class="note">Eklenti ayarlarında kullandığın aynı kod. Ayarlardaki “OpenAI bağlantısını kur” düğmesinden geldiysen otomatik doldurulur. Boşsa <code>start.command</code> ile açılan Terminal penceresinden kopyala.</p>
+<label for="api-key">OpenAI API anahtarı</label><input id="api-key" type="password" required autocomplete="off" spellcheck="false" placeholder="sk-…">
+<label for="model">Model</label><input id="model" required value="gpt-4.1-mini" spellcheck="false">
+<button id="connect" type="submit">Bağlan ve test et</button>
+</form><p id="status" role="status" aria-live="polite">Bağlantı durumu kontrol ediliyor…</p><div id="sample" hidden></div>
+<p class="note">Test, OpenAI’a örnek bir konuşma gönderir ve API kullanımı oluşturur. Gerçek Slack konuşması kullanılmaz. Daha sonra Slack’te “Cevap öner” seçtiğinde seçili bağlam OpenAI’a gönderilir.</p>
+<p class="note">Anahtar bu Mac’te yalnızca kullanıcı hesabının okuyabildiği yerel bir dosyada saklanır; eklentiye veya sohbetimize kaydedilmez.</p>
+<p class="note"><a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">OpenAI API anahtarları ↗</a></p>
+</main><script src="/setup.js"></script></body></html>

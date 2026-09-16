@@ -1,5 +1,13 @@
 .env
 .local/
+__pycache__/
+*.pyc
+test-output/
+.DS_Store
 *.pem
 *.key
-.DS_Store
+preview/
+dist/*
+!dist/spark-reply-1.0.3.zip
+!dist/spark-reply-1.0.3.json
+!dist/spark-reply-1.0.3.crx

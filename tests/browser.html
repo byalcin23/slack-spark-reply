@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Slack Spark browser checks</title><style>body{margin:0;font:14px sans-serif}.pane{position:fixed;top:10px;width:45%;height:70%;border:1px solid gray}.pane:first-of-type{left:0}.pane:nth-of-type(2){right:0}.ql-editor{position:absolute;bottom:5px;width:100%;height:50px;border:1px solid blue}.c-message_kit__message{padding:5px}.hidden{display:none}</style></head><body>
+<div class="pane" data-spark-pane="main">
+<div data-qa="message_container"><b class="c-message_kit__sender">Main author</b><div class="c-message_kit__text">Main conversation only.</div></div>
+<div data-qa="message_container" class="hidden"><div class="c-message_kit__text">Hidden secret must be excluded.</div></div>
+<div id="main-editor" class="ql-editor" contenteditable="true" data-spark-composer></div>
+</div>
+<div class="pane p-thread_view" data-spark-pane="thread">
+<div data-qa="message_container"><b class="c-message_kit__sender">Thread author</b><div class="c-message_kit__text">Thread conversation only.</div></div>
+<div id="thread-editor" class="ql-editor" contenteditable="true" data-spark-composer></div>
+</div>
+<pre id="test-results" style="position:absolute;top:75%">RUNNING</pre><script src="browser-tests.js"></script><script src="spark.js"></script></body></html>

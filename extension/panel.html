@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Spark Reply</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" data-icon="spark"></span><span>Spark <strong>Reply</strong></span></div>
+      <div class="toolbar">
+        <button class="icon-button" id="language-button" data-icon="translate" data-title="languages" aria-haspopup="dialog" aria-expanded="false" aria-controls="language-menu"></button>
+        <button class="icon-button" id="theme-button" data-icon="sun" data-title="appearance" aria-haspopup="dialog" aria-expanded="false" aria-controls="theme-menu"></button>
+        <button class="icon-button" id="close-button" data-icon="close" data-title="close"></button>
+      </div>
+    </header>
+    <div id="language-menu" class="popover" role="dialog" hidden>
+      <p class="popover-heading" data-i18n="interfaceLanguage"></p>
+      <div id="interface-choices" class="choice-grid two"></div>
+      <div class="menu-divider"></div>
+      <p class="popover-heading" data-i18n="replyLanguage"></p>
+      <div id="reply-choices" class="choice-grid two"></div>
+    </div>
+    <div id="theme-menu" class="popover theme-menu" role="dialog" hidden>
+      <p class="popover-heading" data-i18n="appearance"></p>
+      <div id="theme-choices" class="theme-choices"></div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Spark Reply">
+      <button id="reply-tab" class="tab active" data-tab="reply" aria-selected="true" role="tab" aria-controls="reply-view"><span data-icon="spark"></span><span data-i18n="replies"></span></button>
+      <button id="settings-tab" class="tab" data-tab="settings" aria-selected="false" role="tab" aria-controls="settings-view"><span data-icon="settings"></span><span data-i18n="settings"></span></button>
+    </nav>
+    <main>
+      <section id="reply-view" role="tabpanel" aria-labelledby="reply-tab">
+        <div id="connection-banner" class="connection-banner" hidden><span data-icon="link"></span><div><strong data-i18n="connectTitle"></strong><p data-i18n="connectHint"></p></div><button class="text-button" id="connect-shortcut" data-i18n="connect"></button></div>
+        <div id="demo-banner" class="demo-banner" hidden><span class="demo-label">DEMO</span><span data-i18n="demoNotice"></span></div>
+        <div class="section-top"><div><h1 data-i18n="draftTitle"></h1><p class="section-subtitle" data-i18n="draftHint"></p></div><span id="reply-language-badge" class="language-badge"></span></div>
+        <label class="field-label" for="reply-as" data-i18n="replyAs"></label>
+        <input id="reply-as" type="text" maxlength="150" autocomplete="off" spellcheck="false" aria-describedby="identity-hint">
+        <p id="identity-hint" class="helper-text" data-i18n="identityHint"></p>
+        <details id="context-box" class="context-box">
+          <summary><span data-icon="conversation"></span><span data-i18n="context"></span><span id="context-count" class="count">0</span><span class="context-chevron" data-icon="chevron"></span></summary>
+          <div id="context-list" class="context-list"></div>
+          <button id="refresh-button" class="text-button refresh-button"><span data-icon="refresh"></span><span data-i18n="refresh"></span></button>
+        </details>
+        <label class="field-label intent-label" for="intent" data-i18n="intent"></label>
+        <div class="intent-wrap"><textarea id="intent" maxlength="2000" rows="3" spellcheck="true"></textarea><span id="intent-count" aria-hidden="true">0 / 2,000</span></div>
+        <details id="draft-box" class="draft-box" hidden><summary data-i18n="existingDraft"></summary><p id="draft-preview"></p></details>
+        <button id="generate-button" class="button primary full"><span data-icon="spark"></span><span id="generate-label" data-i18n="generate"></span></button>
+        <div id="reply-status" class="status" role="status" aria-live="polite" hidden></div>
+        <div id="results" aria-live="polite"></div>
+      </section>
+      <section id="settings-view" role="tabpanel" aria-labelledby="settings-tab" hidden>
+        <div class="section-top"><div><h1 data-i18n="settings"></h1><p class="section-subtitle" data-i18n="settingsHint"></p></div><span id="connection-state" class="state-pill"><i></i><span data-i18n="notConnected"></span></span></div>
+        <div class="provider-summary"><span class="provider-logo" data-icon="globe"></span><div><strong>OpenAI</strong><p data-i18n="providerDescription"></p></div><span class="provider-check" data-icon="check"></span></div>
+        <label class="field-label" for="api-key"><span data-i18n="apiKey"></span> <span id="key-saved" class="saved-label" hidden data-i18n="saved"></span></label>
+        <div class="input-wrap"><input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="sk-…"><button class="icon-button reveal-button" data-target="api-key" data-icon="eye" data-title="showSecret" type="button"></button></div>
+        <p id="key-hint" class="helper-text"></p>
+        <label class="field-label" for="model" data-i18n="model"></label>
+        <input id="model" type="text" value="gpt-4.1-mini" maxlength="120" autocomplete="off" spellcheck="false">
+        <p class="helper-text" data-i18n="modelHint"></p>
+        <div class="settings-actions"><button id="save-button" class="button primary"><span data-icon="check"></span><span data-i18n="saveConnection"></span></button><button id="test-button" class="button secondary" data-i18n="testConnection"></button></div>
+        <div id="settings-status" class="status" role="status" aria-live="polite" hidden></div>
+        <details class="privacy-box"><summary><span data-icon="shield"></span><span data-i18n="privacyTitle"></span><span class="context-chevron" data-icon="chevron"></span></summary><p id="privacy-copy"></p><p data-i18n="privacyExtra"></p><a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" data-i18n="createKey"></a></details>
+        <button id="forget-button" class="text-button danger" data-i18n="forgetConnection" hidden></button>
+      </section>
+    </main>
+    <footer><span data-icon="shield"></span><span id="footer-copy" data-i18n="footer"></span></footer>
+  </div>
+  <script src="panel.js"></script>
+</body>
+</html>
